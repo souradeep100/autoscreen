@@ -1,5 +1,5 @@
 function autoscreen() {
-  s=`ssh -t -J lsggw ubuntu2 'screen -ls'`
+  s=`ssh -t $@ 'screen -ls'`
   list=`echo $s | grep Detached` > /dev/null 2>&1
   if [[ $? -eq 0 ]]
   then
