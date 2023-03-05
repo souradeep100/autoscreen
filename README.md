@@ -7,3 +7,13 @@ Paste it in .zshrc or .bashrc or .profile and source the file.
 Then call autoscreen <ssh command>
   like autoscreen -J jmpbox remote server
   One thing, this needs password less ssh to be setup first for the remote server.
+
+For passwordless ssh setup, put them on zshrc or bashrc:
+
+function passwordless_proxy() {
+    ssh-copy-id -o ProxyJump=$1 $2
+}
+
+function passwordless() {
+    ssh-copy-id  $@
+}
