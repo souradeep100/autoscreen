@@ -35,5 +35,5 @@ function autoscreen() {
   echo $session_name
   echo "if possible save the current terminal log to a file"
 }
-#put it in zshrc or bashrc, in case of bashrc change  $'zsh -c \'tmpScreenConfig=$(mktemp) 
+#put it in .zshrc or .bashrc
 
