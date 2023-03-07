@@ -2,6 +2,10 @@ function settile() {
     #for zsh
     echo -ne "\e]1;$@\a"
     # for bash echo -ne '\033]0;'"$1"'\a'
+    # for windows terminal with bash
+    #export PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
+    #echo -ne '\033]0;'"$1"'\a'
+}
 }
 function passwordless_proxy() {
     ssh-copy-id -o ProxyJump=$1 $2
