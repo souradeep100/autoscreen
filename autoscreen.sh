@@ -20,7 +20,7 @@
  25   fi
  26   if test -z "$session_name"
  27   then
- 28       session_name=autosession-'$RANDOM$RANDOM$RANDOM$RANDOM'
+ 28       session_name=autosession-"$RANDOM$RANDOM$RANDOM$RANDOM"
  29   else
  30       reattach=1
  31   fi
