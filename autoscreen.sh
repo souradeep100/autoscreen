@@ -26,7 +26,7 @@
  31   fi
  32   settile $session_name-$@
  33   AUTOSSH_GATETIME=5 autossh -M 0 -- -o "ServerAliveInterval 5" -o "ServerAliveCountMax 1" -t $@ $'bash -c \'tmpScreenConfig=$(mktemp); echo "termcapinfo xterm* ti@:te" >> $tmpScreenConfig; echo "altscreen
-     on" >> $tmpScreenConfig; echo "maptimeout 0" >> $tmpScreenConfig; echo "startup_message off" >> $tmpScreenConfig; echo "msgwait 0" >> $tmpScreenConfig; echo "hardstatus ignore" >> $tmpScreenConfig; exec screen -c $tmpScreenConfig -S "'$session_name$'
+     off" >> $tmpScreenConfig; echo "maptimeout 0" >> $tmpScreenConfig; echo "startup_message off" >> $tmpScreenConfig; echo "msgwait 0" >> $tmpScreenConfig; echo "hardstatus ignore" >> $tmpScreenConfig; exec screen -c $tmpScreenConfig -S "'$session_name$'
     " -RD\'';
  34   echo "session id is"
  35   echo $session_name
