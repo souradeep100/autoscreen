@@ -21,3 +21,11 @@ function passwordless() {
 One thing here, if the particular terminal window is closed, the scrollbuffer of that window in local machine will be lost.
 In that case upon reconnecting to the same session, those logs will be gone. To have the all previous scroll buffer
 either keep the particular window opened or save the buffer to a file.
+
+For FreeBSD to install screen on remote server please use :  pkg install sysutils/screen .
+
+The benenfit of using autoscreen :
+1) Persistent remote sessions
+2) Easy clipboard copy/paste 
+3) Auto reconnect of the sessions upon disconnection
+4) No setup of tmux or screen to remote server.
