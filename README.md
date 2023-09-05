@@ -30,9 +30,11 @@ The benenfit of using autoscreen :
 3) Auto reconnect of the sessions upon disconnection
 4) No setup of tmux or screen to remote server.
 The main screenrc :
+```bash
 termcapinfo xterm* ti@:te
 maptimeout 0
 startup_message off
 msgwait 0
 hardstatus ignore
 hardstatus off
+```
